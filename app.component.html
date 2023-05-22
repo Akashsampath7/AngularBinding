@@ -1,0 +1,37 @@
+
+<h1 [innerText]="title"></h1>
+ <!--Event Binding-->
+ <h1>Event Binding</h1>
+<div>
+<h2>Biryani</h2>
+<button (click)="incrementquantity()">Add</button>
+<p>Added {{clickCount}}</p>
+<button (click)="decrementquantity()">Min</button>
+</div>
+<br>
+<p>Enter Your Address {{value}}</p>
+<input (input)="handleInput($event)" />
+
+<p>Total Cost {{value2}}</p>
+<input (keyup.enter)="value2=$any($event.target).value">
+
+<!--Property Binding-->
+<br>
+<br>
+<h1>Poperty Biniding</h1>
+<button [disabled]="isDisabled">Not Available</button>
+<br> <br>
+<div> 
+  <img [src]='src'>
+</div>
+
+<!--Data Binding-->
+<h1>Data Binding</h1>
+<p>welcome, {{FirstName}} {{LastName}}</p>
+<br>
+<div> Cars :
+  <select>
+    <option *ngFor="let i of car">{{i}}</option>
+  </select>
+</div>
+
